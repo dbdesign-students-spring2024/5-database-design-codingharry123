@@ -19,14 +19,14 @@ This data represents information about students' grades in courses at a universi
 - each professor might teach multiple sections of the same course
 - each section meets in a specific classroom with a specific professor
 - professors give assignments, with specific due dates
+- professors give readings that are relevant and helpful to a given assignment.
 - a professor might give the same assignment to different sections of the same course, but with different due dates
 - professors give readings to help with the assignments
 - students complete assignments and receive a grade
 
 Further assumptions:
 
-- Assume there are many rows of data following this structure... only 5 sample rows have been showed for brevity. The number of rows is not important to this assignment.
-- Assume the `relevant_reading` is relevant to a given assignment.
+- Assume there are many rows of data following this structure... only 5 sample rows have been shown for brevity. The number of rows is not important to this assignment.
 
 ## Requirements
 
