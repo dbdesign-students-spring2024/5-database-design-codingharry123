@@ -18,6 +18,7 @@ This data represents information about students' grades in courses at a universi
 - each course can be taught by multiple professors in different sections
 - each professor might teach multiple sections of the same course
 - each section meets in a specific classroom with a specific professor
+- different sections of the same course may meet in different classrooms, even if the professor is the same
 - professors give assignments, with specific due dates
 - professors give readings that are relevant and helpful to a given assignment.
 - a professor might give the same assignment to different sections of the same course, but with different due dates
