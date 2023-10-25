@@ -1,6 +1,6 @@
 # Data Normalization and Entity-Relationship Diagramming
 
-The following table, representing students' grades in courses at a university, is already in [first normal form](https://knowledge.kitchen/A_Simple_Guide_to_Five_Normal_Forms_in_Relational_Database_Theory#FIRST_NORMAL_FORM) (1NF) - all records have the same number of fields, and there is only one value per field.
+The following table, representing students' grades in courses at a university, is already in [first normal form](/courses/database-design/normal-forms-simple-guide/#first-normal-form) (1NF) - all records have the same number of fields, and there is only one value per field.
 
 | assignment_id | student_id | due_date | professor | assignment_topic                | classroom | grade | relevant_reading    | professor_email   |
 | :------------ | :--------- | :------- | :-------- | :------------------------------ | :-------- | :---- | :------------------ | :---------------- |
@@ -11,6 +11,8 @@ The following table, representing students' grades in courses at a university, i
 | 4             | 2          | 04.07.21 | Nevarez   | Spreadsheet aggregate functions | WWH 201   | 65    | Zehnder Page 87     | i.nevarez@foo.edu |
 | ...           | ...        | ...      | ...       | ...                             | ...       | ...   | ...                 | ...               |
 
+These are just a few sample rows... imagine that there may be many more following this same structure.
+
 ## Assumptions
 
 This data represents information about students' grades in courses at a university. The dependencies reflect the reality of how courses work in most universities.
@@ -19,34 +21,40 @@ This data represents information about students' grades in courses at a universi
 - each professor might teach multiple sections of the same course
 - each section meets in a specific classroom with a specific professor
 - different sections of the same course may meet in different classrooms, even if the professor is the same
-- professors give assignments, with specific due dates
+- professors give assignments, with due dates that are specific to the section of the course
 - professors give readings that are relevant and helpful to a given assignment.
-- a professor might give the same assignment to different sections of the same course, but with different due dates
+- a professor might (or might not) give the same assignment to different sections of the same course, but with different due dates
 - professors give readings to help with the assignments
 - students complete assignments and receive a grade
 
 Further assumptions:
 
 - Assume there are many rows of data following this structure... only 5 sample rows have been shown for brevity. The number of rows is not important to this assignment.
+- You should add as many additional fields as you think make sense to this data set, based on your common sense understanding of the domain. For example, course names are not given in the data set, but obviously exist in the real world, so you should add a field for course name and any other obvious missing fields.
 
 ## Requirements
 
 ### Convert to 4NF
 
-Convert this table to the [fourth normal form](https://knowledge.kitchen/A_Simple_Guide_to_Five_Normal_Forms_in_Relational_Database_Theory#Fourth_Normal_Form) (4NF) using the techniques we have learned in this class.
+Convert this table to the [fourth normal form](https://knowledge.kitchen/content/courses/database-design/normal-forms-simple-guide/#fourth-normal-form) (4NF) using the techniques we have learned in this class.
 
 Notes:
 
 - There is no indication of which field is the primary key.
-- Use your own judgment as to which fields might be good candidate key(s).
-- Feel free to add any additional "surrogate key" fields you believe are necessary to make this data 4NF-compliant.
+- Use your own judgment as to which fields might be good candidate primary key(s).
+- Feel free to add or remove any "surrogate key" fields, as necessary to make this data 4NF-compliant.
 
 ### Draw an Entity-Relationship Diagram
 
-Draw an Entity-Relationship Diagram(s) of your 4NF-compliant data tables. Use the tool, [draw.io](https://draw.io) (also known as diagrams.net) to create these diagrams. A [sample .drawio file](./images/example-er-diagrams.drawio) has been included in this repository for example.
+Draw an [Entity-Relationship Diagram](https://knowledge.kitchen/content/courses/database-design/slides/entity-relationship-diagrams/)(s) of your 4NF-compliant data tables. Use the tool, [draw.io](https://draw.io) (also known as diagrams.net) to create these diagrams.
 
 - export the diagram(s) in SVG format into the directory named `images`.
 - publish the diagram(s) to your report, as described below.
+
+A [sample .drawio file](./images/example-er-diagrams.drawio) has been included in this repository for example.
+
+- do not open this file in your code editor
+- once you have cloned this repository on your own computer, open your local copy of this file in draw.io
 
 ### Write a report
 
