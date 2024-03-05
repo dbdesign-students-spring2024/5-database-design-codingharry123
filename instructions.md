@@ -1,6 +1,6 @@
 # Data Normalization and Entity-Relationship Diagramming
 
-The following table, representing students' grades in courses at a university, is already in [first normal form](/courses/database-design/normal-forms-simple-guide/#first-normal-form) (1NF) - all records have the same number of fields, and there is only one value per field.
+The following table, representing students' grades in courses at a university, is already in [first normal form](https://knowledge.kitchen/content/courses/database-design/normal-forms-simple-guide/#first-normal-form) (1NF) - all records have the same number of fields, and there is only one value per field.
 
 | assignment_id | student_id | due_date | professor | assignment_topic                | classroom | grade | relevant_reading    | professor_email   |
 | :------------ | :--------- | :------- | :-------- | :------------------------------ | :-------- | :---- | :------------------ | :---------------- |
